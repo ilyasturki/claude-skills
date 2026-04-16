@@ -22,7 +22,7 @@ Copy the skill folders into your Claude Code skills directory:
 
 ```bash
 # Clone the repo
-git clone https://github.com/ilyassesalama/claude-skills.git
+git clone https://github.com/ilyasturki/claude-skills.git
 
 # Copy all skills to your Claude Code config
 cp -r claude-skills/*/ ~/.claude/skills/
@@ -31,7 +31,7 @@ cp -r claude-skills/*/ ~/.claude/skills/
 Or clone directly into your skills directory:
 
 ```bash
-git clone https://github.com/ilyassesalama/claude-skills.git ~/.claude/skills
+git clone https://github.com/ilyasturki/claude-skills.git ~/.claude/skills
 ```
 
 ## Usage
