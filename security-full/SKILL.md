@@ -1,6 +1,7 @@
 ---
 name: security-full
 description: Run a comprehensive security review of the entire repository.
+effort: max
 ---
 
 Perform a comprehensive security review of the entire repository. Analyze all source files systematically. Identify real vulnerabilities, not hypothetical or stylistic concerns.
