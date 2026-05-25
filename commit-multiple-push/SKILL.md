@@ -1,7 +1,7 @@
 ---
-name: commit-multiple
-description: Create multiple git commits, one per concern, from changes in the working tree
-allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git reset HEAD:*), Bash(git diff:*), Bash(if git diff --staged --quiet; then git diff; else git diff --staged; fi)
+name: commit-multiple-push
+description: Create multiple git commits, one per concern, from changes in the working tree, then push them
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git push:*), Bash(git reset HEAD:*), Bash(git diff:*), Bash(if git diff --staged --quiet; then git diff; else git diff --staged; fi)
 ---
 
 ## Context
@@ -35,5 +35,8 @@ Steps:
    a. `git add` the files (or hunks) for that group
    b. `git commit -m "message"` — single-line, no heredocs or `$()`
 4. Run `git status` to confirm the tree is clean
+5. Push all commits:
+   - Run `git push`.
+   - If push fails because the branch has no upstream, run `git push -u origin <current-branch>`.
 
 If a single file contains hunks for truly distinct concerns (e.g. different commit types or scopes), split them across commits; otherwise keep the whole file in its most relevant commit.

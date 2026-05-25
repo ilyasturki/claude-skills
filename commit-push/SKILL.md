@@ -1,7 +1,7 @@
 ---
-name: commit-manual
-description: Create a git commit
-allowed-tools: Bash(if git diff --staged --quiet; then git diff; else git diff --staged; fi), Bash(git status:*)
+name: commit-push
+description: Create a git commit and push it
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git push:*), Bash(if git diff --staged --quiet; then git diff; else git diff --staged; fi)
 disable-model-invocation: true
 ---
 
@@ -29,3 +29,7 @@ Single-line Conventional Commit:
 
 Based on the above changes, and output rules, create a single git commit on a single line.
 Use `git commit -m "message"` directly. Do NOT use heredocs or $() command substitution.
+
+Then push the commit:
+- Run `git push`.
+- If push fails because the branch has no upstream, run `git push -u origin <current-branch>`.

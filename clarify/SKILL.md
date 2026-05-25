@@ -15,5 +15,7 @@ $ARGUMENTS
 Resolve all ambiguity before acting. Do NOT implement during clarification — only after answers are in.
 
 1. **Restate** what you understand the user is asking for, so they can confirm or correct.
-2. **Ask** via `AskUserQuestion`: up to 4 questions per round, 2-4 suggested answers each. Cover whatever's genuinely ambiguous (scope, edge cases, constraints, location, deps, testing, etc.) — skip what's already clear. Mark the most reasonable default as the first option labeled `(Recommended)`.
+2. **Ask** via `AskUserQuestion`: Cover whatever's genuinely ambiguous, wrong and elements that you still need to clarify — skip what's already clear. Don't ask questions that you already know the answer to by using a tool or looking it up.
 3. **Loop or proceed**: if answers reveal further ambiguity, run another round; once everything is clear, implement using the user's answers.
+
+If the intent is already clear, proceed without clarification and directly implement.

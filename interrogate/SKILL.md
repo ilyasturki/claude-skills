@@ -4,6 +4,7 @@ description: Exhaustively clarify a prompt until 100% confident — asks every q
 argument-hint: [prompt or task description]
 disable-model-invocation: true
 allowed-tools: AskUserQuestion
+model: opus
 effort: max
 ---
 

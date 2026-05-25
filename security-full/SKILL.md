@@ -1,6 +1,7 @@
 ---
 name: security-full
 description: Run a comprehensive security review of the entire repository.
+model: opus
 effort: max
 ---
 
