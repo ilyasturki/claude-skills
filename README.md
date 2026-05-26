@@ -6,15 +6,17 @@ Custom skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
 | Skill | Description | Claude Code | Other Agents |
 |---|---|---|---|
-| `/clarify` | Ask up to 4 clarifying questions per round before acting. Resolves ambiguity without jumping into implementation. | Yes | Yes |
+| `/clarify` | Look first via tools, then ask grouped clarifying questions in one round and confirm intent before implementing. | Yes | Yes |
 | `/interrogate` | Exhaustive clarification — confirms every assumption, asks every question. For high-stakes or ambiguous tasks. | Yes | Yes |
 | `/discuss` | Collaborative discussion — critiques, proposes approaches with trade-offs, lets you pick before implementing. | Yes | Partial |
+| `/spec` | Greenfield product spec for an empty repo — clarifies scope, then challenges the idea (checks prior art, verifies the pain is real, surfaces scope risks), then writes a concise `spec.md`. | Yes | Yes |
 | `/commit` | Auto-stage and commit with a conventional commit message. | Yes | Yes |
 | `/commit-push` | Auto-stage and commit with a conventional commit message, then push. | Yes | Yes |
 | `/commit-multiple` | Split working tree changes into multiple commits, one per logical concern. | Yes | Yes |
 | `/commit-multiple-push` | Split working tree changes into multiple commits, one per logical concern, then push. | Yes | Yes |
 | `/security-full` | Comprehensive security review of the entire repository. | Yes | Yes |
 | `/ncu` | Bump deps via `npm-check-updates`: auto-apply and verify safe upgrades, then enter plan mode for major-bump packages with their migration steps grounded in actual usage. | Yes | Partial |
+| `/readme` | Write or refresh a README that earns the reader's attention — classifies the project, auto-generates a visual (vhs gif, screenshot, or sample output), keeps prose short and honest. | Yes | Partial |
 
 > **Note:** Skills that use Claude Code-specific features like `allowed-tools`, `disable-model-invocation`, or `AskUserQuestion` may need adaptation for other agents. The core prompt logic works anywhere.
 
