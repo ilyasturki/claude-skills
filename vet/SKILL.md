@@ -1,5 +1,5 @@
 ---
-name: verify
+name: vet
 description: After a code change, test it end-to-end (bash, browser, or computer use — whichever fits) and then run `/simplify` to review and clean up the changed code. Use to confirm a change works and is tidy before wrapping up.
 argument-hint: [optional: what to focus on]
 ---
