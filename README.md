@@ -17,6 +17,7 @@ Custom skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 | `/security-full` | Comprehensive security review of the entire repository. | Yes | Yes |
 | `/ncu` | Bump deps via `npm-check-updates`: auto-apply and verify safe upgrades, then enter plan mode for major-bump packages with their migration steps grounded in actual usage. | Yes | Partial |
 | `/readme` | Write or refresh a README that earns the reader's attention — classifies the project, auto-generates a visual (vhs gif, screenshot, or sample output), keeps prose short and honest. | Yes | Partial |
+| `/verify` | Test a recent change end-to-end with the right harness (bash, browser, or computer use), then run `/simplify` to clean up the changed code before wrapping up. | Yes | Partial |
 
 > **Note:** Skills that use Claude Code-specific features like `allowed-tools`, `disable-model-invocation`, or `AskUserQuestion` may need adaptation for other agents. The core prompt logic works anywhere.
 
